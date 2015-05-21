@@ -1,0 +1,80 @@
+body{
+	margin: 5px;
+}
+
+/*Основные элементы сущности*/
+.content{
+	position: absolute;
+	top:60px;
+	left:60px;	
+}
+
+table{
+    position: relative;   
+	border: 1px solid #47AAE7;	
+	margin: 2px;	
+}
+
+td{		
+	width: 50px;
+	height: 50px;
+	padding: 0px;	
+	background-color: #47AAE7;
+	border-width: 0px;
+}
+
+.button{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-width: 0px;
+	color: #FFFfff;
+	font-size: 10px;	
+	padding: 0px;
+	outline: none;		
+}
+
+/*Кнопки добавления*/
+.button-add{
+	background-color: #F1A417;
+}
+
+.button-add-right{	
+	left: 100%;
+	top: 5px;
+}
+
+.button-add-bottom{
+	top: 100%;		
+	left: 5px;
+}
+
+/*Кнопки удалениея*/
+.button-del-left, .button-del-top{
+	background-color: #B00100;	
+}
+
+.button-del-left{
+	right: 100%;
+	top: 5px;
+}
+
+.button-del-top{
+	bottom: 100%;
+	left: 5px;
+}
+
+/*Псевдоклассы кнопок*/
+.button-add:hover{
+	opacity: .6;
+	transition: 0.5s;
+}
+
+.button-add:not(:hover){
+	opacity: 1.0;
+	transition: 0.5s;
+}
+
+.button-add:active{
+	background-color: #E70100;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">	
+	<script src="javascript/angular.js" defer></script>
+	<script src="javascript/main.js" defer></script>
+
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css"> 
+	<link rel="stylesheet" href="style/newstyle.css"> 
+</head>
+
+<body ng-app='Table'>
+
+    <div class="content" ng-controller='contentCtrl'>
+
+    	<table ng-mouseleave="hideButtonsDelete()">
+
+    		<tr ng-repeat='row in list.arrayRows'>
+
+    			<td ng-repeat='column in list.arrayColumns' ng-mouseover="moveButtonsDelete(row, column)"></td>
+
+    		</tr>
+
+		</table>
+
+	  	<button class="button button-add button-add-right" type="button" ng-click="addColumn()">
+	  	<i class="fa fa-plus"></i>
+	  	</button>
+
+		<button class="button button-add button-add-bottom" type="button" ng-click="addRow()">
+		<i class="fa fa-plus"></i>
+		</button>
+
+		<button class="button button-del-top" type="button" ng-show="flagTop" ng-mouseenter="stopTimeoutTop()" ng-mouseleave="flagTop = false" ng-style="{left: lengthTop + 'px'}" ng-click="deleteColumn()">
+		<i class="fa fa-minus"></i>
+		</button>
+
+		<button class="button button-del-left" type="button" ng-show="flagLeft" ng-mouseenter="stopTimeoutLeft()" ng-mouseleave="flagLeft = false" ng-style="{top: lengthLeft + 'px'}" ng-click="deleteRow()">
+		<i class="fa fa-minus"></i>
+		</button>
+
+	</div>
+	
+</body>
+</html>
